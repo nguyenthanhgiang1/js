@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js" integrity="sha512-+wvMk2/lFJe3WajOeKMN704Z0AoCJYQ0WxIoKHBTJ2QCDqo34ErxaiHkWxL5laEK7QcPAsCMTHZp0edtJEu7/g==" crossorigin="anonymous"></script>
+    <script src="scope.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-app="scopeDemo">
+    <div ng-controller="topController">
+
+
+        <div ng-controller="schoolController">
+            <!-- <input type="text" ng-model="name" />
+        <button ng-click="sayHello()">nhan vao</button> -->
+            <div>{{name}}</div>
+        </div>
+        <div ng-controller="classController">
+
+            <div>{{name}}</div>
+        </div>
+        {{name}}
+    </div>
+</body>
+
+</html>

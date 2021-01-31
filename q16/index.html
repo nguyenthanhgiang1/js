@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="a.js"></script>
+    <script src="b.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-controller="p">
+    <table>
+        <tr>
+            <th>Input string</th>
+            <th><input ng-model="input" type="text" /></th>
+        </tr>
+        <tr>
+            <th>output string</th>
+            <th><input ng-model="output" type="text" /></th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button ng-click="tran(input)">luong</button>
+                <button ng-click="toLower(input)">111111</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

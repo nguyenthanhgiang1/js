@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="a.js"></script>
+    <title>Document</title> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="a.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-app="h">
+    <div ng-controller="h1">
+        <table>
+            <tr>
+                <th>A1</th>
+                <th>A2</th>
+                <th>A3</th>
+                <th>A4</th>
+            </tr>
+            <tr ng-repeat="s in h3">
+                <td>{{s.name}}</td>
+                <td>{{s.like}}</td>
+                <td>{{s.dis}}</td>
+                <td>
+                    <button>like</button>
+                    <button>dis</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

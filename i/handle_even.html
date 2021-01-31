@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="j.js"></script> -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="j.js"></script>
+    <title>Document</title>
+    <title>Document</title>
+</head>
+
+<body ng-app="va">
+    <div ng-controller="h">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Likes</th>
+                <th>Dislikes</th>
+                <th>Dislikes</th>
+                <th>Actions</th>
+            </tr>
+            <tr ng-repeat="ta in t" style="color: red; ">
+                <td>{{ta.name}}</td>
+                <td>{{ta.Likes}}</td>
+                <td>{{ta.hieu}}</td>
+                <td>{{ta.Dislikes}}</td>
+                <td>
+                    <button ng-click="tang(ta)">Like</button>
+                    <button ng-click="giam(ta)">Dislike</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

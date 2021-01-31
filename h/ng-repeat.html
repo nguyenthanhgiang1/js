@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="repeat.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="repeatController">
+        <table>
+            <thead>
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                    <td>d</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="e in employees">
+                    <td>{{e.a}}</td>
+                    <td>{{e.b}}</td>
+                    <td>{{e.c}}</td>
+                    <td>{{e.d}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

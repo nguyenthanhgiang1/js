@@ -1,0 +1,16 @@
+<table class="table">
+    <tr>
+        <td>ten</td>
+        <td>ngay sinh</td>
+        <td>luong</td>
+        <td>gioi tinh</td>
+        <td>trang thai</td>
+    </tr>
+    <tr ng-repeat="i in e">
+        <td>{{i.ten | uppercase}}</td>
+        <td>{{i.tuoi | date:"dd/mm/yyyy"}}</td>
+        <td>{{i.luong | currency:""}}</td>
+        <td>{{i.gioitinh | lowercase}}</td>
+        <td>{{i.status | status}}</td>
+    </tr>
+</table>

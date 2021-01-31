@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js" integrity="sha512-+wvMk2/lFJe3WajOeKMN704Z0AoCJYQ0WxIoKHBTJ2QCDqo34ErxaiHkWxL5laEK7QcPAsCMTHZp0edtJEu7/g==" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-controller="myController">
+    <div>
+        Fisst name : <input type="text" ng-model="employee.a"></br>
+        Fisst name : <input type="text" ng-model="employee.b"></br>
+        Fisst name : <input type="text" ng-model="employee.c"></br>
+    </div>
+    <br>
+    <br>
+    <div>
+        Fisst name : {{employee.a}}</br>
+        Fisst name : {{employee.b}}</br>
+        Fisst name : {{employee.c}}</br>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="nested-repeat.js"></script>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="n">
+        <ul>
+            <li ng-repeat="c in countries" ng-init="parentIndex = $index">
+                {{c.name}} - Index {{$index}}
+                <ul>
+                    <li ng-repeat="city in c.cities">
+                        {{city.name}} - Index {{$index}} - Parent Index - {{parentIndex}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

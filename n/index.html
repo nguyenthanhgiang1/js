@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="a.js"></script>
+    <title>Document</title>
+    <style>
+        table thead tr {
+            cursor: pointer;
+        }
+        
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid black;
+            display: inline-block;
+        }
+        
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid black;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="f">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td ng-click="sortData('ten')">ten
+                        <div ng-class="getSortClass('ten')"></div>
+                    </td>
+                    <td ng-click="sortData('tuoi')">ngay sinh
+                        <div ng-class="getSortClass('tuoi')"></div>
+                    </td>
+                    <td ng-click="sortData('luong')">luong
+                        <div ng-class="getSortClass('luong')"></div>
+                    </td>
+                    <td ng-click="sortData('gioitinh')">gioi tinh
+                        <div ng-class="getSortClass('gioitinh')"></div>
+                    </td>
+                    <td ng-click="sortData('status')">trang thai
+                        <div ng-class="getSortClass('status')"></div>
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="i in e | orderBy:sortColumn:reverse">
+                    <td>{{i.ten | uppercase}}</td>
+                    <td>{{i.tuoi | date:"dd/mm/yyyy"}}</td>
+                    <td>{{i.luong | currency:""}}</td>
+                    <td>{{i.gioitinh | lowercase}}</td>
+                    <td>{{i.status | status}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+
+</html>
